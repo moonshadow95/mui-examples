@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Button, ButtonGroup, IconButton, Stack, ToggleButtonGroup, ToggleButton} from "@mui/material";
-import {Send, FormatBold, FormatItalic, FormatUnderlined} from "@mui/icons-material"
+import {Send, FormatBold, FormatItalic, FormatUnderlined, Sell, SendSharp} from "@mui/icons-material"
 
 const MuiButton = () => {
     const [formats, setFormats] = useState<string[] | null>(null)
@@ -29,7 +29,8 @@ const MuiButton = () => {
                 <Button variant='contained' size='large'>large</Button>
             </Stack>
             <Stack spacing={2} direction='row'>
-                <Button variant='contained' startIcon={<Send/>} disableRipple onClick={() => alert('!!')}>send</Button>
+                <Button variant='contained' startIcon={<SendSharp/>} disableRipple
+                        onClick={() => alert('!!')}>send</Button>
                 <Button variant='contained' endIcon={<Send/>} disableElevation>send</Button>
                 <IconButton aria-label='send' size='large' color='secondary'>
                     <Send/>
